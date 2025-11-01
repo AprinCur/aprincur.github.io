@@ -1,13 +1,254 @@
-<html>
-  <head>
-    <title>AprinCur Projects</title>
-  </head>
-  <body>
-    <h1>AprinCur Projects</h1>
-    <h2>Unity Projects</h2>
-    <p>-----------------</p>
-    <p>1- İlk Oyun</p>
-    <p>-----------------</p>
-    <p>2- İkinci Oyun</p>
-  </body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AprinCur Portfolio</title>
+    <style>
+        /* Temel Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #fff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header / Hero */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #dcdcdc;
+            max-width: 600px;
+        }
+
+        header .cta {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #00bcd4;
+            color: #121212;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        header .cta:hover {
+            background-color: #008c9e;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.9);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #00bcd4;
+        }
+
+        /* Projects Grid */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+        }
+
+        .project-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-card .content {
+            padding: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .project-card a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background-color: #00bcd4;
+            color: #121212;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .project-card a.button:hover {
+            background-color: #008c9e;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #1a1a1a;
+            color: #888;
+        }
+
+        footer a {
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            h2.section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#projects">Projeler</a>
+        <a href="#about">Hakkımda</a>
+        <a href="#contact">İletişim</a>
+    </nav>
+
+    <header>
+        <h1>AprinCur</h1>
+        <p>Unity ile geliştirdiğim mobil ve PC oyun projelerimi keşfedin. Yaratıcı ve kaliteli oyun deneyimleri sunmak için sürekli çalışıyorum.</p>
+        <a href="#projects" class="cta">Projelerimi Gör</a>
+    </header>
+
+    <section id="projects">
+        <h2 class="section-title">Projelerim</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="project1.png" alt="Proje 1">
+                <div class="content">
+                    <h3>Mobil Oyun1</h3>
+                    <p>Unity ile geliştirilmiş platform oyunu. Yüksek konsantrasyon gerektirir.</p>
+                    <a href="#" class="button">Detaylı İncele</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project2.png" alt="Proje 2">
+                <div class="content">
+                    <h3>FPS Oyunu</h3>
+                    <p>Hızlı mekaniği ve orijinal kurgusu ile dikkat çeker.</p>
+                    <a href="#" class="button">Detaylı İncele</a>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Hakkımda</h2>
+        <div class="about">
+            <p>Ben AprinCur, Unity ile PC ve mobil oyunlar geliştiren bir oyun geliştiricisiyim. Tasarım ve kullanıcı deneyimine önem veriyorum. Her proje, oyuncuya benzersiz bir deneyim sunmak için detaylı olarak hazırlanır.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">İletişim</h2>
+        <div class="about">
+            <p>Email:</p>
+            <p>GitHub: </p>
+            <p>LinkedIn: </p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 AprinCur. Tüm hakları saklıdır.
+    </footer>
+
+</body>
 </html>
