@@ -124,6 +124,8 @@
 
         .project-card img {
             width: 100%;
+            max-height: 280px; /* 🔵 Telefon ekranı oranına uygun, fazla uzun değil */
+            object-fit: cover;
             display: block;
         }
 
@@ -210,22 +212,25 @@
     <section id="projects">
         <h2 class="section-title">Projelerim</h2>
         <div class="projects">
+
             <div class="project-card">
                 <img src="project1.png" alt="Proje 1">
                 <div class="content">
                     <h3>Soru Sormaca</h3>
-                    <p>Unity ile geliştirilmişbir dil öğrenme uygulaması. Geniş havundan seçtiği kelimelerle hemen teste başlayın.</p>
+                    <p>Unity ile geliştirilmiş bir dil öğrenme uygulaması. Geniş havuzdan seçilen kelimelerle hızlı test çöz.</p>
                     <a href="https://aprincur.github.io/project1.html" class="button">Detaylı İncele</a>
                 </div>
             </div>
+
             <div class="project-card">
                 <img src="project2.png" alt="Proje 2">
                 <div class="content">
                     <h3>FPS Oyunu</h3>
-                    <p>Yapım Aşamasında</p>
-                    <a href="" class="button">Yakında</a>
+                    <p>Yapım aşamasında.</p>
+                    <a href="#" class="button">Yakında</a>
                 </div>
             </div>
+
         </div>
     </section>
 
