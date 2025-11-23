@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proje - ProjectName | AprinCur</title>
+  <meta name="description" content="AprinCur - ProjectName tanıtım sayfası. Oyunun özellikleri, ekran görüntüleri ve indirme/demo bağlantısı.">
+  <style>
+    :root{
+      --bg-1:#0a2a43; /* ana gradient 1 (aynı palet) */
+      --bg-2:#0e4d92;
+      --bg-3:#1b6ca8;
+      --accent:#00bcd4;
+      --card:#1e1e1e;
+      --muted:#cfcfcf;
+      --glass: rgba(255,255,255,0.04);
+      --radius:12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0a2a43, #0e4d92, #1b6ca8);
+    color: #fff;
+}
+    body{
+      background: linear-gradient(135deg,var(--bg-1),var(--bg-2),var(--bg-3));
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+      padding-top:60px; /* nav offset */
+    }
+
+    /* Nav (uyumlu) */
+    nav{position:fixed;top:0;left:0;right:0;height:60px;display:flex;align-items:center;justify-content:center;backdrop-filter: blur(6px);background:rgba(18,18,18,0.45);z-index:40}
+    nav a{color:var(--muted);margin:0 14px;font-weight:700;text-decoration:none}
+    nav a:hover{color:var(--accent)}
+
+    /* Container */
+    .container{max-width:1100px;margin:0 auto;padding:30px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;margin-top:24px}
+    .hero-left h1{font-size:2.25rem;margin-bottom:10px}
+    .hero-left p{color:var(--muted);margin-bottom:18px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--muted);font-size:0.9rem}
+
+    .hero-right{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:14px;box-shadow:0 8px 20px rgba(0,0,0,0.4)}
+    .cover{width:100%;height:280px;border-radius:8px;background-image:url('project-cover.png');background-size:cover;background-position:center}
+    .actions{display:flex;gap:12px;margin-top:12px}
+    .btn{padding:10px 18px;border-radius:20px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--accent);color:#071018}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Main sections */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:30px;margin-top:36px}
+
+    /* Card */
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.45)}
+    .section-title{color:var(--accent);font-size:1.25rem;margin-bottom:12px}
+
+    /* Features list */
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .feature{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
+
+    /* Screenshots */
+    .screenshots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .ss{height:90px;border-radius:8px;background:#111;border:1px dashed rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem}
+
+    /* Tech & meta */
+    .meta-list{list-style:none;color:var(--muted)}
+    .meta-list li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.02)}
+
+    /* Footer */
+    footer{margin-top:40px;padding:20px 0;text-align:center;color:#c0c0c0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .screenshots{grid-template-columns:repeat(2,1fr)}
+      .hero-right{order:-1}
+    }
+    @media (max-width:520px){
+      .screenshots{grid-template-columns:1fr}
+      .hero-left h1{font-size:1.6rem}
+    }
+
+    /* Small back link */
+    .back{display:inline-block;margin-bottom:12px;color:var(--muted);text-decoration:none;font-weight:700}
+    .back:hover{color:var(--accent)}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Ana Sayfa</a>
+    <a href="/projects">Projeler</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+
+  <main class="container">
+
+    <a class="back" href="/">← Portfolyoya Dön</a>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="badges">
+          <span class="badge">Unity</span>
+          <span class="badge">PC / Mobile</span>
+          <span class="badge">2025</span>
+        </div>
+        <h1>ProjectName — Kısa ve Çarpıcı Başlık</h1>
+        <p>Bu alana projenizin kısa bir tanımını koyun. Oyun türü, oynanışın özeti ve öne çıkan bir iki özellik birkaç cümleyle.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#demo">Canlı Demo</a>
+          <a class="btn btn-ghost" href="#features">Özellikler</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="cover" role="img" aria-label="Project cover (değiştir)"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <div style="color:var(--muted);font-weight:700">Durum: Erken Erişim</div>
+          <div style="font-size:0.9rem;color:var(--muted)">Fiyat: Ücretsiz / Ücretli</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div>
+        <div class="card">
+          <div class="section-title">Özellikler</div>
+          <div class="features">
+            <div class="feature">Hızlı ve akıcı kontroller</div>
+            <div class="feature">Çoklu seviye tasarımı</div>
+            <div class="feature">Özelleştirilebilir karakter</div>
+            <div class="feature">İlerleme kaydı ve başarılar</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title">Ekran Görüntüleri</div>
+          <div class="screenshots">
+            <div class="ss">SS 1 (değiştir)</div>
+            <div class="ss">SS 2 (değiştir)</div>
+            <div class="ss">SS 3 (değiştir)</div>
+            <div class="ss">SS 4 (değiştir)</div>
+            <div class="ss">SS 5 (değiştir)</div>
+            <div class="ss">SS 6 (değiştir)</div>
+          </div>
+        </div>
+
+        <div class="card" id="demo" style="margin-top:18px">
+          <div class="section-title">Canlı Demo / Oynanış Videosu</div>
+          <p style="color:var(--muted)">Demo gömme alanı: buraya YouTube embed veya iframe ile oynanış videosu ekleyebilirsiniz.</p>
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="#">Demo Başlat</a>
+            <a class="btn btn-ghost" href="#">Oynanış Videosu</a>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div class="section-title">Proje Bilgileri</div>
+          <ul class="meta-list">
+            <li><strong>Geliştirici:</strong> AprinCur</li>
+            <li><strong>Motor:</strong> Unity (2024.x)</li>
+            <li><strong>Platform:</strong> PC, Android, iOS</li>
+            <li><strong>Durum:</strong> Erken Erişim</li>
+            <li><strong>Etiketler:</strong> Platformer, Single-player, Puzzle</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title">Teknoloji ve Araçlar</div>
+          <p style="color:var(--muted);font-weight:700">Unity • C# • Git • Firebase (isteğe bağlı)</p>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title">İletişim / Beta Kayıt</div>
+          <p style="color:var(--muted)">Betaya katılmak veya demo istemek için e-posta: <a href="mailto:ikugamedeveloper@gmail.com" style="color:var(--accent);">ikugamedeveloper@gmail.com</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="contact">
+      <div style="max-width:900px;margin:0 auto;color:var(--muted)">
+        <p style="margin-bottom:6px">© 2025 AprinCur. Bu proje sayfası portfolyonuzun bir parçasıdır. Görselleri ve metinleri özelleştirin.</p>
+        <p>Projeyi ana sitenizdeki <code>Detaylı İncele</code> butonuna <strong>/projects/projectname.html</strong> şeklinde bağlayabilirsiniz.</p>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
